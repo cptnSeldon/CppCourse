@@ -15,12 +15,6 @@ class BankAccount
             init();
         }
 
-        //constructor : parameterized
-        /*BankAccount(float amount_ = 0)
-        {
-            amount = amount_;
-        }*/
-
         /** Functions */
         void init()
         {
