@@ -2,7 +2,7 @@
 
 BankAccount3::BankAccount3()
 {
-    BankAccount3::init();
+    init();
 };
 
 void BankAccount3::init()

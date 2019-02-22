@@ -2,19 +2,24 @@
 
 using namespace std;
 
-class box
+class Box
 {
-private:
-    /* data */
-public:
-    box(/* args */);
-    ~box();
+    private:
+        //attributes
+        int positionX;
+        int positionY;
+        int width;
+        int height;
+        char symbol;
+
+    public:
+        //constructor
+        Box(void);
+
+        //methods
+        void setPosition(int, int);
+        void setSize(int, int);
+        void setSymbol(char);
+        void translate(int, int);
+        void showBox(void);
 };
-
-box::box(/* args */)
-{
-}
-
-box::~box()
-{
-}
