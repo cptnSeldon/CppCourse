@@ -4,7 +4,7 @@
 using namespace std;
 
 //Using reference
-int divide(int dividend, int divisor, int & remainder)
+int divideR(int dividend, int divisor, int & remainder)
 {
     if(divisor == 0)
     {
@@ -18,7 +18,7 @@ int divide(int dividend, int divisor, int & remainder)
 }
 
 //Using pointer
-int divide(int dividend, int divisor, int * remainder)
+int divideP(int dividend, int divisor, int * remainder)
 {
     if(divisor == 0)
     {
@@ -32,7 +32,7 @@ int divide(int dividend, int divisor, int * remainder)
 }
 
 //Using array
-array<int, 2> divide(int dividend, int divisor)
+array<int, 2> divideT(int dividend, int divisor)
 {
     if(divisor == 0)
     {
@@ -48,24 +48,80 @@ array<int, 2> divide(int dividend, int divisor)
     return tab;
 }
 
+//Using another sort of array
+int * divideT2(int dividend, int divisor)
+{
+    if(divisor == 0)
+    {
+        cout << "Undefined" << endl;
+        exit(0);
+    }
+
+    int * tab = new int[2];
+
+    tab[0] = dividend / divisor;
+    tab[1] = dividend % divisor;
+
+    return tab;
+}
+
+//Using another alternative
+void divideT3(int dividend, int divisor, int * tab)
+{
+    if(divisor == 0)
+    {
+        cout << "Undefined" << endl;
+        exit(0);
+    }
+
+    tab[0] = dividend / divisor;
+    tab[1] = dividend % divisor;
+}
+
 //Main
 void printExercise02()
 {
+    //VARIABLES
     int dividend = 37;
     int divisor = 2;
+
+    //Pass a reference as a parameter
     int remainderA;
-    int remainderB;
+    int qA = divideR(dividend, divisor, remainderA);
 
-    int qA = divide(dividend, divisor, remainderA);
-    int qB = divide(dividend, divisor, remainderB);
-    array<int, 2> tab = divide(dividend, divisor);
-
-    cout << dividend << " / " << divisor
+    cout << "Reference as a parameter : " << endl
+         << dividend << " / " << divisor
          << " = " << qA << ", remains : " << remainderA << endl;
 
-    cout << dividend << " / " << divisor
+    //Pass a pointer as a parameter
+    int remainderB;
+    int qB = divideP(dividend, divisor, &remainderB); //do not forget to pass the address
+
+    cout << "Pointer as a parameter : " << endl
+         << dividend << " / " << divisor
          << " = " << qB << ", remains : " << remainderB << endl;
 
-    cout << dividend << " / " << divisor
+    //Using Array as return type
+    array<int, 2> tab = divideT(dividend, divisor);
+    cout << "Array as a return type : " << endl
+         << dividend << " / " << divisor
          << " = " << tab[0] << ", remains : " << tab[1] << endl;
+
+    //Using Pointer as return type
+    int * tab2 = divideT2(dividend, divisor);
+    cout << "Pointer - as a return type" << endl
+         << dividend << " / " << divisor
+         << " = " << tab2[0] << ", remains : " << tab2[1] << endl;
+
+    delete tab2;
+
+    //Using a Pointer as a parameter
+    int * tab3 = new int[2];
+    divideT3(dividend, divisor, tab3);
+
+    cout << "Pointer as a parameter" << endl
+         << dividend << " / " << divisor
+         << " = " << tab3[0] << ", remains : " << tab3[1] << endl;
+
+    delete tab3;
 }

@@ -100,6 +100,10 @@
         int * tab = nullptr;
         tab = new int[10];
         delete []tab;
+        -----------------------------------------------------------
+        Fail handling : std::bad_alloc
+        > new (std::nothrow) int[1024]; -> nothrow returns a nullptr
+        > if (ptr == nullptr) {..}
     */
     #pragma endregion Dynamic Allocation
     #pragma region String
@@ -115,6 +119,8 @@
     #pragma endregion String
     #pragma region Misc
     /*
+        C :     #define MAX (x,y) ( (x) > y ) ? (x) : (y))
+        C++ :   inline int max(int x, int y) { return x > y ? < : y; }
         -----------------------------------------------------------
         C++11
             auto
