@@ -1,5 +1,5 @@
 # C++
-C++ exercise "alternative" corrections for INF1x @HE-Arc.
+C++ exercise _alternative_ corrections for INF1x @HE-Arc.
 
 - Most of the comments in the code are written in English.
 - I recommend using another IDE than Code::Blocks, like Visual Studio Code or CLion, as you can customize them with plugins.
@@ -13,24 +13,24 @@ Visual Studio Code with C++17.
 
 ### Plugins
 #### Language
-- C/C++ : ms-vscode.cpptools
-- C++ Intellisense : austin.code-gnu-global        
+- __C/C++__ : ms-vscode.cpptools
+- __C++ Intellisense__ : austin.code-gnu-global        
 
 ##### Misc
-- CMake Tools : vector-of-bool.cmake-tools
-- Code Runner : formulahendry.code-runner
+- __CMake Tools__ : vector-of-bool.cmake-tools
+- __Code Runner__ : formulahendry.code-runner
 
 #### Code + project readability
-- Dracula theme : gerane.theme-dracula
-- Colorized {} : coenraads.bracket-pair-colorize
-- Todo Highlight : wayou.vscode-todo-highlight
-- Colorized comments : aaron-bond.better-comments
-- Trailing Spaces : shardulm94.trailing-spaces
-- Icons for project files : vscode-icons-team.vscode-icons
+- __Dracula theme__ : gerane.theme-dracula
+- __Colorized {}__ : coenraads.bracket-pair-colorize
+- __Todo Highlight__ : wayou.vscode-todo-highlight
+- __Colorized comments__ : aaron-bond.better-comments
+- __Trailing Spaces__ : shardulm94.trailing-spaces
+- __Icons for project files__ : vscode-icons-team.vscode-icons
 
 #### Spelling
-- Code Spell Checker : streetsidesoftware.code-spell-checker
-- French Code Spell Checker : streetsidesoftware.code-spell-checker-french
+- __Code Spell Checker__ : streetsidesoftware.code-spell-checker
+- __French Code Spell Checker__ : streetsidesoftware.code-spell-checker-french
 
 #### Versioning
-- GitLens : eamodio.gitlens
+- __GitLens__ : eamodio.gitlens
