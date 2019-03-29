@@ -16,7 +16,7 @@ Visual Studio Code with C++17.
 - __C/C++__ : ms-vscode.cpptools
 - __C++ Intellisense__ : austin.code-gnu-global        
 
-##### Misc
+##### Build & Run
 - __CMake Tools__ : vector-of-bool.cmake-tools
 - __Code Runner__ : formulahendry.code-runner
 
@@ -27,6 +27,7 @@ Visual Studio Code with C++17.
 - __Colorized comments__ : aaron-bond.better-comments
 - __Trailing Spaces__ : shardulm94.trailing-spaces
 - __Icons for project files__ : vscode-icons-team.vscode-icons
+- __Path Intellisense__ : christian-kohler.path-intellisense
 
 #### Spelling
 - __Code Spell Checker__ : streetsidesoftware.code-spell-checker
