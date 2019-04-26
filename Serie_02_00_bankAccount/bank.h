@@ -2,6 +2,9 @@
 
 using namespace std;
 
+#ifndef BANK1_H
+#define BANK1_H
+
 class BankAccount
 {
     private:
@@ -43,3 +46,5 @@ class BankAccount
                  << amount <<endl;
         }
 };
+
+#endif BANK1_H

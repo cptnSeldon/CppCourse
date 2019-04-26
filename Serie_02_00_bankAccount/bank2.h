@@ -2,6 +2,9 @@
 
 using namespace std;
 
+#ifndef BANK2_H
+#define BANK2_H
+
 class BankAccount2
 {
     private:
@@ -53,3 +56,5 @@ void BankAccount2::show()
     cout << "The amount on your bak account is : "
             << amount <<endl;
 }
+
+#endif BANK2_H

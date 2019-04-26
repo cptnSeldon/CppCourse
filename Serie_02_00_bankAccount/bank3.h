@@ -2,6 +2,9 @@
 
 using namespace std;
 
+#ifndef BANK3_H
+#define BANK3_H
+
 class BankAccount3
 {
     private:
@@ -21,3 +24,5 @@ class BankAccount3
 
         void show(void);
 };
+
+#endif BANK3_H
