@@ -5,7 +5,9 @@ using namespace std;
 
 class Node
 {
+    ///Linked List is allowed to use this class
     //friend class LinkedList;
+
     public:
         //DESTRUCTOR
         ~Node()
@@ -18,7 +20,7 @@ class Node
         ///prevents memory leaks
         static int nbNodes;
 
-    //private:
+    private:
         //CONSTRUCTOR
         Node(int data)
         {

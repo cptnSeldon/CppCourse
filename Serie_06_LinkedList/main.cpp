@@ -1,20 +1,15 @@
 #include <iostream>
-#include "node.h"
+#include "linkedlist.h"
 
 using namespace std;
 
 int main()
 {
-    Node nodeA(1);
-    Node nodeB(1, &nodeA);
+    //TEST 1 : constructor by default
+    LinkedList list;
 
-    cout << nodeA.data << endl;
-    cout << nodeA.nbNodes << endl;
-    cout << nodeA.nextNode << endl;
-    //cout << nodeA.nextNode->data << endl;
-
-    cout << nodeB.data << endl;
-    cout << nodeB.nbNodes << endl;
-    cout << nodeB.nextNode << endl;
-    cout << nodeB.nextNode->data << endl;
+    cout << list.size << endl;
+    cout << list.head << endl;
+    cout << list.current << endl;
+    cout << list.queue << endl;
 }

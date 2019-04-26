@@ -1,5 +1,5 @@
 #ifndef LINKED_LIST_H
-//#define LINKED_LIST_H
+#define LINKED_LIST_H
 
 #include "node.h"
 
@@ -7,8 +7,13 @@ class LinkedList
 {
     public:
         //CONSTRUCTOR
-        LinkedList();
-        LinkedList(const LinkedList & other);
+        LinkedList()
+        {
+            size = 0;
+            head = current = queue = nullptr;
+        }
+
+        /*LinkedList(const LinkedList & other);
         //DESTRUCTOR
         ~LinkedList();
 
@@ -34,8 +39,9 @@ class LinkedList
         int getSize();
 
         //OPERATOR OVERLOAD : =
+        */
 
-    private:
+    //private:
         int size;
         Node * head;
         Node * queue;
