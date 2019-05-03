@@ -8,51 +8,59 @@ using namespace std;
 int main()
 {
     //TEST 1 : constructor by default
-    LinkedList list;
+    LinkedList * list = new LinkedList();
 
     //TEST 2 : add start
-    list.addStart(22);      //22
-    list.addStart(26);      //26 22
+    list->addStart(22);      //22
+    list->addStart(26);      //26 22
 
     //TEST 3 : add end
-    list.addEnd(52);        //26 22 52
-    list.addEnd(100);       //26 22 52 100
+    list->addEnd(52);        //26 22 52
+    list->addEnd(100);       //26 22 52 100
 
-    //TEST 4 : constructor by copy
-    LinkedList list2(list); //26 22 52 100
+    //TEST 4 : print
+    list->print();
 
-    //TEST 5 : remove first
+    //TEST 5 : constructor by copy
+    LinkedList list2(*list); //26 22 52 100
+
+    //TEST 6 : remove first
     list2.removeFirst();    //22 52 100
 
-    //TEST 6 : remove last
-    list.removeLast();      //26 22 52
+    //TEST 7 : remove last
+    list->removeLast();      //26 22 52
 
-    //TEST 7 : print
-    list.print();
+    //TEST 8 : remove at    //26 52
+    list->removeAt(1);
+
+    list->print();
     list2.print();
 
-    //TEST 8 : remove all
-    list.removeAll();
-    list.addEnd(0);
+    //TEST 9 : remove all
+    list->removeAll();
+    list->addEnd(0);
 
-    list.print();
+    list->print();
 
-    //TEST 9 : remove last => size = 1
-    list.removeLast();
+    //TEST 10 : remove last => size = 1
+    list->removeLast();
 
-    list.print();
+    list->print();
 
-    //TEST 10 : remove methods => size = 0
-    list.removeLast();
-    list.removeFirst();
-    list.removeAll();
+    //TEST 11 : remove methods => size = 0
+    list->removeLast();
+    list->removeFirst();
+    list->removeAll();
 
-    list.addStart(32);
+    list->addStart(32);
 
-    list.print();
+    list->print();
 
-    //TEST 10 : remove first => size = 1
-    list.removeFirst();
+    //TEST 12 : remove first => size = 1
+    list->removeFirst();
 
-    list.print();
+    list->print();
+
+    //TEST 13 : destructor
+    //delete list;
 }

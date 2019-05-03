@@ -53,7 +53,11 @@ class LinkedList
             }
         }
         //DESTRUCTOR
-        ~LinkedList() { removeAll(); }
+        ~LinkedList()
+        {
+            removeAll();
+            cout << "DESTRUCTOR" << endl;
+        }
 
         //ADD
         ///at the beginning of the list
@@ -330,7 +334,53 @@ class LinkedList
         }
 
         ///at given position
-        //void removeAt(int position);
+        void removeAt(int position)
+        {
+            if(size == 0)
+            {
+                cout << "already empty list (remove at position)" << endl;
+                return;
+            }
+
+            if(size > 0)
+            {
+                if(position == 0) removeFirst();
+                else if(position == size-1) removeLast();
+                else
+                {
+                    if(position < size)
+                    {
+                        current = head;
+                        Node * toDelete = current;
+                        for(int i = 0; i < position-1; i++)
+                        {
+                            current = current->nextNode;
+                        }
+
+                        /*
+                            *temp*
+                            ☇
+                            [a-1 node]
+                                ☇ next
+                                [a node]    <== node to delete
+                                    ☇ next
+                                    [a+1 node]
+
+                        */
+
+                        toDelete = current->nextNode;
+
+                        current->nextNode = current->nextNode->nextNode;
+
+                        toDelete->nextNode = nullptr;
+
+                        delete toDelete;
+
+                        --size;
+                    }
+                }
+            }
+        }
         ///last node
         void removeLast()
         {
@@ -453,6 +503,8 @@ class LinkedList
 
             int value;
             bool test = false;
+
+            cout << "List's size : " << size << "\t";
 
             for(int i = 0; i < size-1; i++)
             {
