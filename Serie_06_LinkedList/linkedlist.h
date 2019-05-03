@@ -16,7 +16,8 @@
 class LinkedList
 {
     public:
-        //CONSTRUCTOR
+        //CONSTRUCTORS
+        ///by default
         LinkedList()
         {
             /*
@@ -35,27 +36,27 @@ class LinkedList
             size = 0;
             head = current = queue = nullptr;
         }
-
+        ///by copy
         LinkedList(const LinkedList & source)
         {
             //initialize the attributes to default values
             size = 0;
             head = current = queue = nullptr;
 
-            //create a temporary pointer who will point on the list head
-            Node * tempPointer = source.head;
+            Node * temp = source.head;
 
-            //fill current liked list with source linked list
-            while(tempPointer != nullptr)
+            //visit each node of source list
+            while(temp != nullptr)
             {
-                addEnd(tempPointer->data);
-                tempPointer = tempPointer->nextNode;
+                addEnd(temp->data);
+                temp = temp->nextNode;
             }
         }
         //DESTRUCTOR
-        //~LinkedList();
+        ~LinkedList() { removeAll(); }
 
         //ADD
+        ///at the beginning of the list
         bool addStart(int data)
         {
             /*
@@ -119,8 +120,9 @@ class LinkedList
 
             return true;
         }
-
+        ///at the given position
         //bool addPosition(int position, int data);
+        ///at the end of the list
         bool addEnd(int data)
         {
             /*
@@ -135,7 +137,7 @@ class LinkedList
             current = new (nothrow) Node(data);
 
             /*
-            => node creation failed
+                => node creation failed
 
                 *current*
                    ☇
@@ -146,7 +148,7 @@ class LinkedList
 
             /*
                 list = {}
-            =>
+                =>
                 list { node0 }
 
                 *queue*  *current*
@@ -163,7 +165,7 @@ class LinkedList
             }
             /*
                 list = {}
-            =>
+                =>
                 list { node0 }
 
                  *current*
@@ -203,7 +205,7 @@ class LinkedList
 
             /*
 
-            *queue*  *head*  *current*
+                *queue*  *head*  *current*
                    ☇       ☇        ☇
                         [new node]
                              ☇ *next*
@@ -257,7 +259,8 @@ class LinkedList
             return false;
         }
 
-        //REMOVE : something is wrong, to check
+        //REMOVE
+        ///first node
         void removeFirst()
         {
             if(size == 0)
@@ -326,7 +329,9 @@ class LinkedList
             }
         }
 
+        ///at given position
         //void removeAt(int position);
+        ///last node
         void removeLast()
         {
             if(size == 0)
@@ -418,6 +423,7 @@ class LinkedList
                 --size;
             }
         }
+        ///all
         void removeAll()
         {
             if(size == 0)
@@ -431,9 +437,11 @@ class LinkedList
             }
         }
 
-        //
+        //GETTER
+        ///returns size
         int getSize() { return size; }
 
+        //PRINT
         void print()
         {
 
@@ -463,8 +471,27 @@ class LinkedList
         }
 
         //OPERATOR OVERLOAD : =
+        LinkedList & operator= (const LinkedList & source)
+        {
+            if(this == &source) cout << "Source and Destination lists are equivalent." << endl;
 
-    //private:
+            if(this != &source)
+            {
+                //seems kind of familiar -> constructor by copy
+                Node * temp = source.head;
+
+                //visit each node of source list
+                while(temp != nullptr)
+                {
+                    addEnd(temp->data);
+                    temp = temp->nextNode;
+                }
+            }
+
+            return * this;
+        }
+
+    private:
         int size;
         Node * head;
         Node * queue;
