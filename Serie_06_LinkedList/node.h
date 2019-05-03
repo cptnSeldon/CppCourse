@@ -6,7 +6,7 @@ using namespace std;
 class Node
 {
     ///Linked List is allowed to use this class
-    //friend class LinkedList;
+    friend class LinkedList;
 
     public:
         //DESTRUCTOR
