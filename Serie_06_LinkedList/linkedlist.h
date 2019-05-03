@@ -348,7 +348,7 @@ class LinkedList
                 else if(position == size-1) removeLast();
                 else
                 {
-                    if(position < size)
+                    if(position > 0 && position < size)
                     {
                         current = head;
                         Node * toDelete = current;
