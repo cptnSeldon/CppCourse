@@ -113,7 +113,7 @@ void printExercise02()
          << dividend << " / " << divisor
          << " = " << tab2[0] << ", remains : " << tab2[1] << endl;
 
-    delete tab2;
+    delete []tab2;
 
     //Using a Pointer as a parameter
     int * tab3 = new int[2];
@@ -123,5 +123,5 @@ void printExercise02()
          << dividend << " / " << divisor
          << " = " << tab3[0] << ", remains : " << tab3[1] << endl;
 
-    delete tab3;
+    delete []tab3;
 }

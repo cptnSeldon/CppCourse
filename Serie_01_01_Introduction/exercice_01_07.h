@@ -6,7 +6,7 @@ using namespace std;
 void printExercise07()
 {
     int primeNumbers[] = { 1, 2, 3, 5, 7, 11, 13 };
-    int copied[7] = { 0, 0, 0, 0, 0, 0, 0 };
+    int copied[] = { 0, 0, 0, 0, 0, 0, 0 };
     int arraySize = sizeof(primeNumbers) / sizeof(int);
 
     //normal for loop
@@ -20,25 +20,25 @@ void printExercise07()
     //range based   -> use at least C++11
     cout << "Range-based for loop : " << endl;
 
-    for(int& elem : primeNumbers)
+    for(int& element : primeNumbers)
     {
-        cout << elem << " ";
+        cout << element << " ";
     }
     cout << endl;
 
     //copy array 1 in array 2
     int i=0 ;
 
-    for(int& elem : primeNumbers)
+    for(int& element : primeNumbers)
     {
-        copied[i++] = elem;
+        copied[i++] = element;
     }
 
     cout << "Copied array : " << endl;
 
-    for(int& elem : copied)
+    for(int& element : copied)
     {
-        cout << elem << " ";
+        cout << element << " ";
     }
     cout << endl;
 }

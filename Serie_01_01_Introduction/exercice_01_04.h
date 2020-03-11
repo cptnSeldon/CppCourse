@@ -14,8 +14,11 @@ double Minimum(double a, double b)
 
 void printExercise04()
 {
-    cout << "Minimum(5, 6) : " << Minimum(5, 6)
-         << "\nMinimum(2.1, 3.2) : " << Minimum(2.1, 3.2) << endl;
+    cout << "Minimum(7, 3) : " << Minimum(7, 3)
+         //<< "\nMinimum(7.0, 3) : " << Minimum(7.0, 3)
+         //<< "\nMinimum(7, 3.0) : " << Minimum(7, 3.0)
+         << "\nMinimum(7.0, 3.0) : " << Minimum(7.0, 3.0)
+         << endl;
 
     //To call Minimum(7.0, 3) : delete int Minimum(int a, int b) -> type conflict
 }

@@ -61,7 +61,7 @@ int main()
     BankAccount3.withdraw(20);
     BankAccount3.show();
 
-    cout << "Press on any key to quit the program." << endl;
+    //cout << "Press on any key to quit the program." << endl;
 
     cin.clear();
     cin.get();

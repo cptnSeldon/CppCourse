@@ -51,9 +51,10 @@ int main()
 
     cout << endl;
 
+    /*
     cout << "Press on any key to quit the program." << endl;
-
     cin.clear();
     cin.get();
+    */
     return 0;
 }
