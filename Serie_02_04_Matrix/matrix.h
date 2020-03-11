@@ -26,9 +26,9 @@ class Matrix
         //print method
         void show() const;
         //addition method
-        Matrix add(const Matrix & m);
+        void add(const Matrix & m);
         ///delete matrix : used several times
         void deleteMatrix();
 
 };
-#endif MATRIX_H
+#endif //MATRIX_H

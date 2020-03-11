@@ -10,9 +10,9 @@ int main()
 
     m1.show();
     m2.show();
-    m3.show()
+    m3.show();
 
-    m1.add(m2);
+    m3.add(m2);
 
     m3.show();
 

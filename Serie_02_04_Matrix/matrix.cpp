@@ -75,29 +75,28 @@ void Matrix::show() const
         }
         cout << endl;
     }
+    cout << endl;
 }
 
-Matrix Matrix::add(const Matrix & m)
+void Matrix::add(const Matrix & m)
 {
-    Matrix resultingMatrix;
-
     for(int i = 0; i < size; i++)
     {
         for(int j = 0; j < size; j++)
         {
-            resultingMatrix[i][j] = this->matrix[i][j] + m.matrix[i][j];
+            this->matrix[i][j] += m.matrix[i][j];
         }
     }
-
-    return resultingMatrix;
 }
 
 void Matrix::deleteMatrix()
 {
     for(int i = 0; i < size; i++)
     {
-        delete[] this->matrix[i];
+        delete this->matrix[i];
+        this->matrix[i] = nullptr;
     }
 
     delete[] this->matrix;
+    matrix = nullptr;
 }
